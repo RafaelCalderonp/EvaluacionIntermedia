@@ -8,8 +8,9 @@ import org.jetbrains.annotations.NotNull
 data class ItemEntity(
     @PrimaryKey(autoGenerate = true)
     @NotNull
-    val id: Int,
+    val id: Int=0,
     val nombre: String,
     val precio: Int,
-    val ctd: Int
+    val ctd: Int,
+    val total:Int
 )

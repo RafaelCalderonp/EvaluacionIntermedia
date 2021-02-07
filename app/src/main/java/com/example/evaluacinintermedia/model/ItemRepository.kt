@@ -16,6 +16,9 @@ class ItemRepository(private val itemDao: ItemDao) {
     suspend fun deleteAll() {
         itemDao.deleteAll()
     }
+    suspend fun deleteItem(item: ItemEntity){
+        itemDao.deleteItem(item)
+    }
 
     fun getItemByID(id: Int): LiveData<ItemEntity> {
         return itemDao.getItemByID(id)
